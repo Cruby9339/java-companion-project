@@ -1,4 +1,4 @@
-//TODO 1.0   package naming convention, improve package declaration
+
 package com.organization.mvcproject.controller;
 
 import java.util.List;
@@ -38,7 +38,8 @@ public class GameAndReviewController {
 	 * update games.jsp as well. 
 	 * SEE:  https://www.baeldung.com/spring-circular-view-path-error
 	 */
-		return new ModelAndView("review", "command", new Review());
+		return new ModelAndView("reviewCreatePage", "command", new Review());
+		
 	}
 
 	@RequestMapping(value = "/addReview", method = RequestMethod.POST)
@@ -61,7 +62,7 @@ public class GameAndReviewController {
 		 * update games.jsp as well. 
 		 * SEE:  https://www.baeldung.com/spring-circular-view-path-error
 		 */
-		return new ModelAndView("games", "command", new Game());
+		return new ModelAndView("gamesPage", "command", new Game());
 	}
 
 	/**
